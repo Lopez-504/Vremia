@@ -1,4 +1,49 @@
 
+# Common Idioms
+ 
+- The `&&` / `||` chaining idiom is one of those Bash tricks that makes scripts both concise and expressive. It’s basically a poor man’s `if`, but elegant.
+- `[` … `]` is the Bash **test** command.
+- Here are some flags for this command:
+	- `-r` means file **exists** and is **readable**. 
+	- `-x` same but executable
+	- `-w` same but writable
+	- `-d` tests if something is a directory.
+	- `-f file` → is a **regular file** (not a directory, socket, etc.)
+	- `-e file` → does the file **exist** (any type)?
+	- `-s file` → file exists and has **size > 0**
+	- `-L file` → file is a **symlink**
+	- `-h file` → same as `-L` (historical alias)
+	- `-O file` → file is **owned by the current user**
+	- `-G file` → file belongs to the user’s **group**
+- `!` negates a condition, as always
+- `&&` logic `and` between 2 bash test commands
+- `||` logic `or` between 2 bash test commands
+
+- Composed example: check if file exists and is readable, and that there's no `Cactus` directory, then if those 2 conditions are met, it decompresses something.
+```bash
+[ -r ~etuser/Cactus.tar.gz ] && ! [ -d ~/Cactus ] && tar -xzf ~etuser/Cactus.tar.gz -C ~/
+```
+
+- Do something only if a file exists
+```bash
+[ -f file.txt ] && echo "Found it!"
+```
+
+- Do something only if a file does _not_ exist
+```bash
+[ ! -f file.txt ] && echo "Missing file!"
+```
+
+- Do one thing *or* another
+```bash
+[ -d ~/Cactus ] && echo "Already installed" || echo "Not installed yet"
+```
+
+- Chain more than two conditions
+```bash
+[ -r config.cfg ] && [ -w logs/ ] && run_program
+```    
+
 # Send mail from terminal
 
 - First u need to set some keys and passwords with Google. Then use
@@ -139,4 +184,3 @@ alias cfind='hisory 500 | grep'
 date --reference=path/to/file
 ```
 
-- [ ] Mark useful
