@@ -96,7 +96,7 @@ du -sh ~/Documents
 # Create directory skeleton in one line
 
 - To create a directory and its parent at the same time, use `mkdir -p`
-- 
+- [...]
 
 # Write document within the terminal
 
@@ -128,6 +128,7 @@ asciinema play file_name.cast
 # Host information
 
 - To get general info: `hostnamectl`
+
 ```bash
    Static hostname: jorge-HP-Laptop
          Icon name: computer-laptop
@@ -137,9 +138,7 @@ asciinema play file_name.cast
   Operating System: Ubuntu 20.04.6 LTS
             Kernel: Linux 5.4.0-72-generic
       Architecture: x86-64
-
 ```
-
 
 # Copy from terminal
 
