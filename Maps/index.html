@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_21cf75e748116ea25aba7763546e8dac {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_21cf75e748116ea25aba7763546e8dac" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_21cf75e748116ea25aba7763546e8dac = L.map(
+                "map_21cf75e748116ea25aba7763546e8dac",
+                {
+                    center: [-33.0472, -71.6127],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0598ca8db0dd89102407b40c8123ec9a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_21cf75e748116ea25aba7763546e8dac);
+        
+    
+            var feature_group_aff3e0ef271fc542999de69abcb06f92 = L.featureGroup(
+                {}
+            ).addTo(map_21cf75e748116ea25aba7763546e8dac);
+        
+    
+            var marker_61a2a4d71b25a6843d3e89954ed4a74f = L.marker(
+                [-33.0371, -71.6247],
+                {}
+            ).addTo(feature_group_aff3e0ef271fc542999de69abcb06f92);
+        
+    
+            var icon_4bd5b4dff629d376de62da2ee5a743b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_61a2a4d71b25a6843d3e89954ed4a74f.setIcon(icon_4bd5b4dff629d376de62da2ee5a743b1);
+        
+    
+        var popup_0e73b3ca6cd8fcb469c060b0c5de2dd9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4a1aeaff43879c1d5ce4d19d96727ba3 = $(`<div id="html_4a1aeaff43879c1d5ce4d19d96727ba3" style="width: 100.0%; height: 100.0%;">A beautiful harbor and the main port of Valparaíso.</div>`)[0];
+                popup_0e73b3ca6cd8fcb469c060b0c5de2dd9.setContent(html_4a1aeaff43879c1d5ce4d19d96727ba3);
+            
+        
+
+        marker_61a2a4d71b25a6843d3e89954ed4a74f.bindPopup(popup_0e73b3ca6cd8fcb469c060b0c5de2dd9)
+        ;
+
+        
+    
+    
+            marker_61a2a4d71b25a6843d3e89954ed4a74f.bindTooltip(
+                `<div>
+                     Valparaíso's Port
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_45ed2894690feea0f08a9c40078d130d = L.marker(
+                [-33.0416, -71.6288],
+                {}
+            ).addTo(feature_group_aff3e0ef271fc542999de69abcb06f92);
+        
+    
+            var icon_60f7eda64b139d67e4908a8981027dc8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_45ed2894690feea0f08a9c40078d130d.setIcon(icon_60f7eda64b139d67e4908a8981027dc8);
+        
+    
+        var popup_9ba7166cfc9404377045c1e38175efb2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a1c93326a5b9af72faa0f280cb3b0ab8 = $(`<div id="html_a1c93326a5b9af72faa0f280cb3b0ab8" style="width: 100.0%; height: 100.0%;">The main square in the city's historic center.</div>`)[0];
+                popup_9ba7166cfc9404377045c1e38175efb2.setContent(html_a1c93326a5b9af72faa0f280cb3b0ab8);
+            
+        
+
+        marker_45ed2894690feea0f08a9c40078d130d.bindPopup(popup_9ba7166cfc9404377045c1e38175efb2)
+        ;
+
+        
+    
+    
+            marker_45ed2894690feea0f08a9c40078d130d.bindTooltip(
+                `<div>
+                     Plaza Sotomayor
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_5d7c611d9b704f2bc27cd2f8f96a3e07 = L.featureGroup(
+                {}
+            ).addTo(map_21cf75e748116ea25aba7763546e8dac);
+        
+    
+            var marker_0da7f12031629471e47581bf9fde4415 = L.marker(
+                [-33.0465, -71.6252],
+                {}
+            ).addTo(feature_group_5d7c611d9b704f2bc27cd2f8f96a3e07);
+        
+    
+            var icon_ebc4f4ae3a1626b1b3c57d0c71633f59 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0da7f12031629471e47581bf9fde4415.setIcon(icon_ebc4f4ae3a1626b1b3c57d0c71633f59);
+        
+    
+        var popup_522add33c75a5a8d61a0a79731f16ef6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_66f67224d7cdf55bfc19b330c2db822c = $(`<div id="html_66f67224d7cdf55bfc19b330c2db822c" style="width: 100.0%; height: 100.0%;">One of the homes of the famous poet Pablo Neruda.</div>`)[0];
+                popup_522add33c75a5a8d61a0a79731f16ef6.setContent(html_66f67224d7cdf55bfc19b330c2db822c);
+            
+        
+
+        marker_0da7f12031629471e47581bf9fde4415.bindPopup(popup_522add33c75a5a8d61a0a79731f16ef6)
+        ;
+
+        
+    
+    
+            marker_0da7f12031629471e47581bf9fde4415.bindTooltip(
+                `<div>
+                     La Sebastiana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2534c35c07c2ad7a66d8192ed7c1f1c6 = L.marker(
+                [-33.0387, -71.6166],
+                {}
+            ).addTo(feature_group_5d7c611d9b704f2bc27cd2f8f96a3e07);
+        
+    
+            var icon_070b88f322be3980d85365f113dbb9c5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_2534c35c07c2ad7a66d8192ed7c1f1c6.setIcon(icon_070b88f322be3980d85365f113dbb9c5);
+        
+    
+        var popup_66da34a658ef444ebfa6fcfb3f374cf2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f5739a8a7c9d7ffad64b6ed8aaefbf70 = $(`<div id="html_f5739a8a7c9d7ffad64b6ed8aaefbf70" style="width: 100.0%; height: 100.0%;">A popular viewpoint with historical monuments.</div>`)[0];
+                popup_66da34a658ef444ebfa6fcfb3f374cf2.setContent(html_f5739a8a7c9d7ffad64b6ed8aaefbf70);
+            
+        
+
+        marker_2534c35c07c2ad7a66d8192ed7c1f1c6.bindPopup(popup_66da34a658ef444ebfa6fcfb3f374cf2)
+        ;
+
+        
+    
+    
+            marker_2534c35c07c2ad7a66d8192ed7c1f1c6.bindTooltip(
+                `<div>
+                     Paseo 21 de Mayo
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var layer_control_a497f781792125daac30953c1735c002 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_0598ca8db0dd89102407b40c8123ec9a,
+                },
+                overlays :  {
+                    "Places of Interest" : feature_group_aff3e0ef271fc542999de69abcb06f92,
+                    "Historical Markers" : feature_group_5d7c611d9b704f2bc27cd2f8f96a3e07,
+                },
+            };
+            L.control.layers(
+                layer_control_a497f781792125daac30953c1735c002.base_layers,
+                layer_control_a497f781792125daac30953c1735c002.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_21cf75e748116ea25aba7763546e8dac);
+        
+</script>
+</html>
