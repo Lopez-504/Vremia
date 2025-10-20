@@ -1,7 +1,11 @@
+# Linux Things
 
+- Interesting little things I've learned as a full-time Linux user
+
+---
 # Common Idioms
- 
-- The `&&` / `||` chaining idiom is one of those Bash tricks that makes scripts both concise and expressive. It’s basically a poor man’s `if`, but elegant.
+
+- The `&&` and `||` chaining idiom is one of those Bash tricks that makes scripts both concise and expressive. It’s basically a poor man’s `if`, but elegant.
 - `[` … `]` is the Bash **test** command.
 - Here are some flags for this command:
 	- `-r` means file **exists** and is **readable**. 
@@ -18,6 +22,9 @@
 - `!` negates a condition, as always
 - `&&` logic `and` between 2 bash test commands
 - `||` logic `or` between 2 bash test commands
+
+--
+## Examples
 
 - Composed example: check if file exists and is readable, and that there's no `Cactus` directory, then if those 2 conditions are met, it decompresses something.
 ```bash
@@ -44,6 +51,7 @@
 [ -r config.cfg ] && [ -w logs/ ] && run_program
 ```    
 
+---
 # Send mail from terminal
 
 - First u need to set some keys and passwords with Google. Then use
@@ -57,6 +65,7 @@
 ```
 
 
+---
 # Download from any public repo
 
 For example, suppose the file you want is:
@@ -78,6 +87,8 @@ curl -LO https://raw.githubusercontent.com/user/repo/main/path/to/file.txt
 - `-O` → saves the file with the same name.
 - You usually don’t need `-k` (that disables SSL verification, only needed if you have cert issues).
 
+--
+
 If you want to download a **whole repo**, `curl` alone isn’t enough (since GitHub serves it as a zipball/tarball). For that you can do:
 ```bash
 curl -L https://github.com/user/repo/archive/refs/heads/main.zip -o repo.zip
@@ -86,6 +97,7 @@ unzip repo.zip
 
 or u might as well use `VSCode` to clone it.
 
+---
 # Size of a directory
 
 - To calculate the total size of a directory, use `du -sh` (`s` for summary and `h` for human-readable)
@@ -93,11 +105,13 @@ or u might as well use `VSCode` to clone it.
 du -sh ~/Documents
 ```
 
+---
 # Create directory skeleton in one line
 
 - To create a directory and its parent at the same time, use `mkdir -p`
 - [...]
 
+---
 # Write document within the terminal
 
 - **here-document** in Bash: the syntax is as follows
@@ -111,11 +125,15 @@ cat >par/tov_ET.par <<"stop_str"
 - `cat >par/tov_ET.par`: opens the file for writing (overwriting if it exists).
 - `<<"stop_str"`: begins a **here-document**, which tells `cat` to read the following lines as standard input until it sees a line exactly matching `stop_str`. Notice that we can use any string as our `stop_str`
 
+---
 # Saving terminal outputs
 
-- See [this](https://www.google.com/search?q=write+existing+output+to+file+terminal&oq=write+existing+output+&gs_lcrp=EgZjaHJvbWUqBwgCECEYoAEyCQgAEEUYORifBTIHCAEQIRigATIHCAIQIRigATIHCAMQIRifBdIBCDg3NDRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8)
-	- The script command looks nice
-- Another interesting option is to record the terminal session, including everything u see in the terminal: commands, outputs, vi, nano, etc. Record session with
+- The classical way is to redirect the output to a `.log` or `.txt` file using `>` or `>>`
+	- It redirects the standard output (**stdout**) of the command to a file.
+
+- Another interesting option is to record the terminal session, including everything u see in the terminal: commands, outputs, vi, nano, etc. 
+- This recording not only allows u to see the 
+- Record session with
 ```bash
 asciinema rec 
 ```
@@ -125,6 +143,25 @@ and to play a `.cast` file
 asciinema play file_name.cast
 ```
 
+--
+- A powerful redirection combination is `2>&1`
+	- `2` refers to the file descriptor for **standard error (stderr)**, which is where error messages are typically sent.
+	- `&1` refers to the file descriptor for **standard output**. The ampersand (`&`) is crucial here: it tells the shell to treat `1` as a file descriptor, not just a literal number.
+	- Putting it all together, `2>&1` means *redirect standard error to the same location as standard output*. 
+	
+```bash
+	python extract_wrf_2015.py > wrf_extract_2015_test2.log 2>&1 &
+```
+- this sends both the standard output and any error messages to the **same log** file. 
+
+or If u want to send them to different files: 
+
+```bash
+command > stdout.log 2> stderr.log
+```
+
+
+---
 # Host information
 
 - To get general info: `hostnamectl`
@@ -140,6 +177,7 @@ asciinema play file_name.cast
       Architecture: x86-64
 ```
 
+---
 # Copy from terminal
 
 - This command allows u to copy text from the terminal to your clipboard so u can safely paste it wherever u want
@@ -147,6 +185,9 @@ asciinema play file_name.cast
 pbcopy < path_to_text
 ```
 
+- Or just use `ctrl` + `shift` + `c` and `ctrl` + `shift` + `v` 
+
+---
 # Loops in terminal
 
 - U can run a `for` loop in the terminal like this:
@@ -156,6 +197,7 @@ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker c
 - Pretty intuitive
 
 
+---
 # Find files and directories
 
 - The `find` command is pretty good and flexible, check manual for details but for now here's the basic syntax:
@@ -167,6 +209,7 @@ For example, if u know the file's name is something like *data whatever*  u can 
 find ~/Documents -maxdepth 3 -name *data*
 ```
 
+---
 # Find command in history
 
 - The most interactive way is using `ctrl + R` 
@@ -177,9 +220,23 @@ alias cfind='hisory 500 | grep'
 ```
 - And for special occasions when u want to search over the entire history, just use `history | grep` directly in the terminal
 
+---
 # Modification date
+
+- Get the modification date of a file
 
 ```bash
 date --reference=path/to/file
 ```
+
+---
+# Stronger commands
+
+- Use `nohup` prior to your command if u want it be immune to you closing the session
+- Use `&` at the end of your command to be able to keep using that terminal session immediately 
+
+```bash
+nohup extract_wrf_var.py 2021 WSWDIR &  
+```
+
 
