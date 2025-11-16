@@ -5,12 +5,14 @@
 
 	- The top-hat spherical collapse model (TSC) is one of the most fundamental analytical frameworks to describe the non-linear growth of cosmic structure. TSC has motivated, and been widely applied in, various researches even in the current era of precision cosmology. While numerous studies exist to examine its validity against numerical simulations in a statistical fashion, there are few analyses to compare the TSC dynamics in an individual object-wise basis, which is what we attempt in the present paper. We extract 100 halos at z = 0 from a cosmological N-body simulation according to the conventional TSC criterion for the spherical over-density. Then we trace back their spherical counter-parts at earlier epochs. Just prior to the turn-around epoch of the halos, their dynamics is well approximated by TSC, but their turn-around epochs are systematically delayed and the virial radii are larger by ∼ 20% on average relative to the TSC predictions. We ﬁnd that this systematic deviation is mainly ascribed to the non-uniformity/inhomogeneity of dark matter density proﬁles and the non-zero velocity dispersions, both of which are neglected in TSC. In particular, the inside-out-collapse and shell-crossing of dark matter halos play an important role in generating the signiﬁcant velocity dispersion. The implications of the present result are brieﬂy discussed. Subject headings: cosmology; spherical collapse model; dark matter halo
 
+---
 
 - Herrera-2019: Top-Hat Spherical Collapse with Clustering Dark Energy. I. Radius Evolution and Critical Contrast Density
 
 - <mark>East-2018</mark>:
 
 - East 2012: 
+
 
 - <mark>Munoz 2022</mark>: EBWeyl: a Code to Invariantly Characterize Numerical Spacetimes
 
@@ -43,7 +45,7 @@
 	- In this work we investigate the **effect of the CNN depth on its accuracy** in the large-scale image recognition setting. Our main contribution is a thorough evaluation of networks of increasing depth using an architecture with very small (3 × 3) convolution filters, which shows that a significant improvement on the prior-art configurations can be achieved by pushing the depth to **16–19 weight layers**. 
 	- These findings were the basis of our ImageNet Challenge 2014 submission, where our team secured the first and the second places in the localisa- tion and classification tracks respectively. We also show that our representations generalise well to other datasets, where they achieve state-of-the-art results. We have made our two best-performing ConvNet models publicly available to facilitate further research on the use of deep visual representations in computer vision.
 
-§•
+---
 
 -  Gal-2016: Dropout as a Bayesian Approximation: Representing Model Uncertainty in Dep Learning
 
@@ -52,15 +54,17 @@
 	- This mitigates the problem of representing uncertainty in deep learning without sacrificing either computational complexity or test accuracy. We perform an extensive study of the properties of dropout’s uncertainty. Various network architectures and nonlinearities are assessed on tasks of regression and classification, using MNIST as an example. 
 	- We show a considerable improvement in predictive log-likelihood and RMSE compared to existing state-of-the-art methods, and finish by using dropout’s uncertainty in deep reinforcement learning.
 
-
-
+---
 
 - <mark>He 2016</mark>: Deep Residual Learning for Image Recognition
 	- Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions. We provide comprehensive empirical evidence showing that these residual networks are easier to optimize, and can gain accuracy from considerably increased depth. On the ImageNet dataset we evaluate residual nets with a depth of up to 152 layers—8×deeper than VGG nets but still having lower complexity. An ensemble of these residual nets achieves 3.57% error on the ImageNet test set. This result won the 1st place on the ILSVRC 2015 classification task. We also present analysis on CIFAR-10 with 100 and 1000 layers. The depth of representations is of central importance for many visual recognition tasks. Solely due to our extremely deep representations, we obtain a 28% relative improvement on the COCO object detection dataset. Deep residual nets are foundations of our submissions to ILSVRC & COCO 2015 competitions 1 , where we also won the 1st places on the tasks of ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation.
 
+---
+
 - Krizhevsky 2012: ImageNet Classification with Deep Convolutional Neural Networks
 	- We trained a large, deep convolutional neural network to classify the 1.2 million high-resolution images in the ImageNet LSVRC-2010 contest into the 1000 dif- ferent classes. On the test data, we achieved top-1 and top-5 error rates of 37.5% and 17.0% which is considerably better than the previous state-of-the-art. The neural network, which has 60 million parameters and 650,000 neurons, consists of five convolutional layers, some of which are followed by max-pooling layers, and three fully-connected layers with a final 1000-way softmax. To make train- ing faster, we used non-saturating neurons and a very efficient GPU implemen- tation of the convolution operation. To reduce overfitting in the fully-connected layers we employed a recently-developed regularization method called “dropout” that proved to be very effective. We also entered a variant of this model in the ILSVRC-2012 competition and achieved a winning top-5 test error rate of 15.3%, compared to 26.2% achieved by the second-best entry.
 
+---
 
 - <mark>Lucie-Smith 2018</mark>: Machine learning cosmological structure formation
 
@@ -71,11 +75,15 @@
 	- Additional information on the shape of the local gravitational potential is **not able to improve halo collapse predictions**; the linear density field contains sufficient information for the algorithm to also reproduce **ellipsoidal collapse** predictions based on the **Sheth-Tormen model**. 
 	- We investigate the algorithm’s performance in terms of halo mass and radial position and perform **blind analyses on independent initial conditions realisations** to demonstrate the generality of our results.
 
+---
+
 - Szegedy 2014: Going deeper with convolutions
 	- We propose a deep convolutional NN architecture codenamed Inception, which was responsible for setting the **new state of the art for classification and detection in the ImageNet Large-Scale Visual Recognition Challenge 2014** (ILSVRC14). 
 	- The main hallmark of this architecture is the improved utilization of the computing resources inside the network. This was achieved by a carefully crafted design that allows for **increasing the depth and width of the network while keeping the computational budget constant**. 
 	- To optimize quality, the architectural decisions were based on the **Hebbian principle** and the **intuition of multi-scale processing**. 
 	- One particular incarnation used in our submission for ILSVRC14 is called **GoogLeNet**, a 22 layers deep network, the quality of which is assessed in the context of classification and detection.
+
+---
 
 - <mark>Dai 2018</mark>: Galaxy Morphology Classification with Deep Convolutional Neural Networks
 
@@ -86,16 +94,22 @@
 		- Is it openly available? yes, code [Github](https://github.com/Adaydl/GalaxyClassification/tree/master) and data [Kaggle](https://www.kaggle.com/c/galaxy-zoo-the-galaxy-challenge)
 		- Their preprocessing pipeline in training seems smart
 
+---
+
 - De la Calleja 2004: Machine learning and image analysis for morphological galaxy classification
 
 	- We present an experimental study of ML and image analysis for performing automated morphological galaxy classification. We used a **NN**, and a **locally weighted regression** method, and implemented **homogeneous ensembles of classifiers**. The ensemble of NNs was created using the **bagging ensemble method**, and manipulation of input features was used to create the ensemble of locally weighed regression. 
 	- The galaxies used were rotated, centred, and cropped, all in a fully automatic manner. In addition, we used **PCA** to reduce the dimensionality of the data, and to extract relevant information in the images. 
 	- Preliminary experimental results using 10-fold CV show that the homogeneous ensemble of locally weighted regression produces the best results, with over 91% accuracy when considering three galaxy types (E, S and Irr), and over 95% accuracy for two types (E and S).
 
+---
+
 - <mark>Dieleman 2015</mark>: Rotation-invariant convolutional neural networks for galaxy morphology prediction
 
 	- Measuring the morphological parameters of galaxies is a key requirement for studying their formation and evolution. Surveys such as the Sloan Digital Sky Survey (SDSS) have resulted in the availability of very large collections of images, which have permitted population-wide analyses of galaxy morphology. 
 	- Morphological analysis has traditionally been carried out mostly via visual inspection by trained experts, which is time consuming and does not scale to large   ($\gtrsim10^4$) numbers of images. Although attempts have been made to build automated classification systems, these have not been able to achieve the desired level of accuracy. The Galaxy Zoo project successfully applied a crowdsourcing strategy, inviting online users to classify images by answering a series of questions. Unfortunately, even this approach does not scale well enough to keep up with the increasing availability of galaxy images. We present a deep neural network model for galaxy morphology classification which exploits translational and rotational symmetry. It was developed in the context of the Galaxy Challenge, an international competition to build the best model for morphology classification based on annotated images from the Galaxy Zoo project. For images with high agreement among the Galaxy Zoo participants, our model is able to reproduce their consensus with near-perfect accuracy (>99 per cent) for most questions. Confident model predictions are highly accurate, which makes the model suitable for filtering large collections of images and forwarding challenging images to experts for manual annotation. This approach greatly reduces the experts’ workload without affecting accuracy. The application of these algorithms to larger sets of training data will be critical for analysing results from future surveys such as the Large Synoptic Survey Telescope
+
+---
 
 - Chen 2020: Concept Whitening for Interpretable Image Recognition
 
@@ -103,6 +117,8 @@
 	- In this work, rather than attempting to analyze a NN posthoc, we introduce a mechanism, called **concept whitening** (CW), to alter a given layer of the network to allow us to better understand the computation leading up to that layer. When a concept whitening module is added to a CNN, **the axes of the latent space are aligned with known concepts of interest**. 
 	- By experiment, we show that CW can provide us a much clearer understanding for how the network gradually learns concepts over layers. CW is an alternative to a **batch normalization layer** in that it normalizes, and also **decorrelates** (whitens) the latent space. 
 	- CW can be used in any layer of the network without hurting predictive performance.
+
+---
 
 - Katebi 2018: Galaxy morphology prediction using capsule networks
 
@@ -127,9 +143,15 @@
 	- Our results show that the algorithm prefers low values of the Hubble constant, consistent or at least a few standard deviation away from the CMB estimate, regardless of the priors taken initially in each model. 
 	- This supports the result of the traditional MCMC analysis and could be viewed as strengthening evidence for **dynamical dark energy being a more favorable model of late time cosmology**.
 
+---
+
 - Rubin-2013: The virialization density of peaks with general density profiles under spherical collapse
 
+---
+
 - <mark>Suto-2015</mark>: CONFRONTATION OF TOP-HAT SPHERICAL COLLAPSE AGAINST DARK HALOS FROM COSMOLOGICAL N-BODY SIMULATIONS
+
+---
 
 - Grandón-2018: Exploring evidence of interaction between dark energy and dark matter
 
@@ -137,9 +159,13 @@
 	- In particular, we use the BOSS BAO measurements at $z ≃ 0.32, 0.57$ and $2.34$, using the full 2-dimensional constraints on the angular and line of sight BAO scale. We find that using all five observational probes together, **two of the interaction models show positive evidence** at more than $3 σ$. 
 	- Although significant, further study is needed to establish this statement firmly. (Is this a joke...)
 
+---
+
 - <mark>Giblin-2018</mark>: The Limited Accuracy of Linearized Gravity
 
 	- Standard cosmological models rely on an approximate treatment of gravity, utilizing solutions of the linearized Einstein equations as well as physical approximations. In an era of precision cosmology, we should ask: are these approximate predictions sufficiently accurate for comparison to observations, and can we draw meaningful conclusions about properties of our Universe from them? In this work we examine the accuracy of linearized gravity in the presence of collisionless matter and a cosmological constant utilizing fully general relativistic simulations. We observe the gauge-dependence of corrections to linear theory, and note the amplitude of these corrections. For perturbations whose amplitudes are in line with expectations from the standard ΛCDM model, we find that the full, general relativistic metric is well-described by linear theory in Newtonian and harmonic gauges, while the metric in comoving-synchronous gauge is not. For the largest observed structures in our Universe, our results suggest that corrections to linear gravitational theory can reach or surpass the percent-level.
+
+---
 
 - Tian-2021: On the question of measuring spatial curvature in an inhomogeneous universe
 
