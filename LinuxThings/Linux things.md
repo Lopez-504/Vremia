@@ -2,6 +2,8 @@
 
 - Interesting little things I've learned as a full-time Linux user
 
+![Be creative](556.jpg)
+
 ---
 # Common Idioms
 
@@ -239,4 +241,20 @@ date --reference=path/to/file
 nohup extract_wrf_var.py 2021 WSWDIR &  
 ```
 
+## List of Vremia Project Papers
 
+<details>
+<summary><b>Paper 1: Theoretical Foundations of Vremia (2024)</b></summary>
+
+-   **Authors:** Lopez-504, et al.
+-   **Abstract:** This paper details the core algorithms and mathematical frameworks used to model Vremia's time-space dynamics.
+-   [Download PDF](link-to-pdf-1.pdf)
+
+</details>
+
+<details>
+<summary><b>Paper 2: Vremia Project Implementation and Results (2025)</b></summary>
+
+The second phase of the project focuses on applying the theoretical model to real-world data and presents the first set of verifiable simulation results. It is expected to be published next quarter.
+
+</details>
