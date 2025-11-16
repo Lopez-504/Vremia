@@ -2,7 +2,7 @@
 
 - Interesting little things I've learned as a full-time Linux user
 
-![Be creative](556.jpg)
+![Be creative](../556.jpg)
 
 ---
 # Common Idioms
