@@ -1,0 +1,42 @@
+name: Automated MD File Push
+
+# Defines when the workflow runs
+on:
+  schedule:
+    # Runs at 21:00 PM UTC every 4 days.
+    # The '*/4' after '0' means "every 4 days of the month" (i.e., 1st, 5th, 9th, 13th, etc.).
+    - cron: '0 21 * * *'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Defines the jobs in the workflow
+jobs:
+  auto_commit_push:
+    # The runner environment
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. Checks out your repository code
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      # 2. Generates the update for the MD file
+      - name: Generate MD update
+        run: |
+          DATE_TIME=$(date '+%Y-%m-%d %H:%M:%S')
+          echo "Automated push run at $DATE_TIME" >> my_update_file.md
+          
+      # 3. Commits the changes
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add LinuxThings.md
+          git commit -m "Automated update: ${DATE_TIME}" || echo "No changes to commit"
+      
+      # 4. Pushes the changes
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main # CHANGE THIS if your branch is 'master'
