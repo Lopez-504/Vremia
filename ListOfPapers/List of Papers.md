@@ -21,6 +21,7 @@
 	- With this, we look into whether the **Top-Hat spherical and homogeneous collapse model** provides a good description of the collapse of over-densities. We find that the Top-Hat is an excellent approximation for the evolution of peaks, where we observe that the shear is negligible and collapse takes place when the linear density contrast reaches the predicted critical value $\delta_C= 1.69$. Additionally, we characterise the outward expansion of the turn-around boundary and show how it depends on the initial distribution of matter, finding that it is faster in denser directions, incorporating more and more matter in the infalling region. 
 	- Using the EBWeyl code we look at the distribution of the **electric and magnetic parts of the Weyl tensor**, finding that they're stronger along and around the filaments, respectively. We introduce a method to **dynamically classify the different regions of the simulation box in Petrov types**. With this, we find that the spacetime is of Petrov type I everywhere, as expected, but we can identify the leading order type in each region and at different times. Along the filaments, the leading Petrov type is D, while the centre of the over-densities remains **conformally flat**, type O, in line with the Top-Hat model. 
 	- The surrounding region demonstrates a sort of peeling-off in action, with the spacetime transitioning between different Petrov types as non-linearity grows, with production of gravitational waves.
+
 ---
 
 - <mark>Bruni 2014</mark>: Non-Gaussian initial conditions in ΛCDM: Newtonian, relativistic, and primordial contributions
@@ -41,7 +42,8 @@
 -  <mark>Simonyan-2015</mark>: VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE SCALE IMAGE RECOGNITION 
 	- In this work we investigate the **effect of the CNN depth on its accuracy** in the large-scale image recognition setting. Our main contribution is a thorough evaluation of networks of increasing depth using an architecture with very small (3 × 3) convolution filters, which shows that a significant improvement on the prior-art configurations can be achieved by pushing the depth to **16–19 weight layers**. 
 	- These findings were the basis of our ImageNet Challenge 2014 submission, where our team secured the first and the second places in the localisa- tion and classification tracks respectively. We also show that our representations generalise well to other datasets, where they achieve state-of-the-art results. We have made our two best-performing ConvNet models publicly available to facilitate further research on the use of deep visual representations in computer vision.
----
+
+§•
 
 -  Gal-2016: Dropout as a Bayesian Approximation: Representing Model Uncertainty in Dep Learning
 
@@ -49,7 +51,9 @@
 	- A direct result of this theory gives us **tools to model uncertainty** with dropout NNs – extracting information from existing models that has been thrown away so far. 
 	- This mitigates the problem of representing uncertainty in deep learning without sacrificing either computational complexity or test accuracy. We perform an extensive study of the properties of dropout’s uncertainty. Various network architectures and nonlinearities are assessed on tasks of regression and classification, using MNIST as an example. 
 	- We show a considerable improvement in predictive log-likelihood and RMSE compared to existing state-of-the-art methods, and finish by using dropout’s uncertainty in deep reinforcement learning.
----
+
+
+
 
 - <mark>He 2016</mark>: Deep Residual Learning for Image Recognition
 	- Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions. We provide comprehensive empirical evidence showing that these residual networks are easier to optimize, and can gain accuracy from considerably increased depth. On the ImageNet dataset we evaluate residual nets with a depth of up to 152 layers—8×deeper than VGG nets but still having lower complexity. An ensemble of these residual nets achieves 3.57% error on the ImageNet test set. This result won the 1st place on the ILSVRC 2015 classification task. We also present analysis on CIFAR-10 with 100 and 1000 layers. The depth of representations is of central importance for many visual recognition tasks. Solely due to our extremely deep representations, we obtain a 28% relative improvement on the COCO object detection dataset. Deep residual nets are foundations of our submissions to ILSVRC & COCO 2015 competitions 1 , where we also won the 1st places on the tasks of ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation.
