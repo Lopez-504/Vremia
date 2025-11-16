@@ -1,3 +1,5 @@
 # Vremia
 
---> This repo automatically scrapes arXiv for certain keywords or authors and generates summaries using AI
+This repo contains some of the most insightful pieces of knowledge I've acquired over my career, enjoy :)
+
+
