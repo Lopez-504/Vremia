@@ -1,1 +1,3 @@
-Something
+To do list
+
+- Fix the Math renderization
