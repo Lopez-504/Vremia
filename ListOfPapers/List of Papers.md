@@ -8,12 +8,14 @@
 	- We extract $100$ halos at $z = 0$ from a cosmological N-body simulation according to the conventional TSC criterion for the spherical over-density. Then we trace back their spherical counter-parts at earlier epochs. Just prior to the turn-around epoch of the halos, **their dynamics is well approximated by TSC**, but their **turn-around epochs are systematically delayed** and the virial radii are larger by $\sim 20\%$ on average relative to the TSC predictions. 
 	- We ﬁnd that this systematic deviation is mainly ascribed to the non-uniformity/inhomogeneity of dark matter density proﬁles and the non-zero velocity dispersions, **both of which are neglected in TSC**. In particular, the **inside-out-collapse** and **shell-crossing** of dark matter halos play an important role in generating the signiﬁcant velocity dispersion. The implications of the present result are brieﬂy discussed. 
 	- Subject headings: cosmology; spherical collapse model; dark matter halo
+
 ---
 
 - <mark>Herrera 2019</mark>: Top-Hat Spherical Collapse with Clustering Dark Energy. I. Radius Evolution and Critical Contrast Density
 
 	- Understanding the influence of dark energy on the formation of structures is currently a major challenge in Cosmology, since it can distinguish otherwise degenerated viable models. In this work we consider the Top-Hat Spherical-Collapse (SC) model with **dark energy**, which can partially (or totally) cluster, according to a free parameter $\gamma$. 
 	- The lack of energy conservation has to be taken into account accordingly, as we will show. We determine characteristic quantities for the SC model, such as the **critical contrast density** and **radius evolution**, with particular emphasis on their dependence on the clustering parameter $\gamma$.
+
 ---
 
 - <mark>East 2018</mark>: Comparing fully general relativistic and Newtonian calculations of structure formation
@@ -22,6 +24,7 @@
 	- A topic of ongoing debate is to what degree this fully captures the dynamics dictated by GR, especially in the era of precision cosmology. To quantitatively assess this, we directly compare standard N-body Newtonian calculations to full numerical solutions of the Einstein equations, for cold matter with various magnitude initial inhomogeneities on scales comparable to the **Hubble horizon**. 
 	- We analyze the differences in the evolution of density, luminosity distance, and other quantities defined with respect to **fiducial observers**. This is carried out by reconstructing the effective spacetime and matter fields dictated by the Newtonian quantities, and by taking care to distinguish effects of numerical resolution. 
 	- We find that the fully general relativistic and Newtonian calculations show **excellent agreement**, even **well into the nonlinear regime**. They only notably differ in regions where the weak gravity assumption breaks down, which arise when considering extreme cases with perturbations exceeding standard values.
+
 ---
 
 - <mark>East 2012</mark>: Hydrodynamics in full general relativity with conservative AMR
@@ -29,6 +32,7 @@
 	- There is great interest in numerical relativity simulations involving matter due to the likelihood that binary compact objects involving neutron stars will be detected by gravitational wave observatories in the coming years, as well as to the possibility that binary compact object mergers could explain short-duration gamma-ray bursts.
 	- We present a **code designed for simulations of hydrodynamics coupled to the Einstein field equations** targeted toward such applications. This code has recently been used to study eccentric mergers of black hole-neutron star binaries. We evolve the fluid conservatively using **high-resolution shock-capturing methods**, while the field equations are solved in the **generalized-harmonic formulation** with finite differences. 
 	- In order to resolve the various scales that may arise, we use adaptive mesh refinement (AMR) with grid hierarchies based on truncation error estimates. A noteworthy feature of this code is the implementation of the flux correction algorithm of Berger and Colella to ensure that the conservative nature of fluid advection is respected across AMR boundaries. We present various tests to compare the performance of different limiters and flux calculation methods, as well as to demonstrate the utility of AMR flux corrections.
+
 ---
 
 - <mark>Munoz 2022</mark>: EBWeyl: a Code to Invariantly Characterize Numerical Spacetimes
