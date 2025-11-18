@@ -5,7 +5,7 @@ on:
   schedule:
     # Runs at 21:00 PM UTC every 4 days.
     # The '*/4' after '0' means "every 4 days of the month" (i.e., 1st, 5th, 9th, 13th, etc.).
-    - cron: '0 21 * * *'
+    - cron: '0 0 1 1 *'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
