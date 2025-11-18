@@ -4,10 +4,15 @@
 
 - <mark>Suto-2015</mark>: CONFRONTATION OF TOP-HAT SPHERICAL COLLAPSE AGAINST DARK HALOS FROM COSMOLOGICAL N-BODY SIMULATIONS
 
+<details>
+	<summary>Abstract</summary>
+
 	- The top-hat spherical collapse model (TSC) is one of the most fundamental analytical frameworks to describe the **non-linear growth of cosmic structure**. TSC has motivated, and been widely applied in, various researches even in the current era of precision cosmology. While numerous studies exist to examine its validity against numerical simulations in a statistical fashion, there are few analyses to compare the TSC dynamics in an **individual object-wise basis**, which is what we attempt in the present paper. 
 	- We extract $100$ halos at $z = 0$ from a cosmological N-body simulation according to the conventional TSC criterion for the spherical over-density. Then we trace back their spherical counter-parts at earlier epochs. Just prior to the turn-around epoch of the halos, **their dynamics is well approximated by TSC**, but their **turn-around epochs are systematically delayed** and the virial radii are larger by $\sim 20\%$ on average relative to the TSC predictions. 
 	- We ﬁnd that this systematic deviation is mainly ascribed to the non-uniformity/inhomogeneity of dark matter density proﬁles and the non-zero velocity dispersions, **both of which are neglected in TSC**. In particular, the **inside-out-collapse** and **shell-crossing** of dark matter halos play an important role in generating the signiﬁcant velocity dispersion. The implications of the present result are brieﬂy discussed. 
 	- Subject headings: cosmology; spherical collapse model; dark matter halo
+	
+</details>
 
 ---
 
