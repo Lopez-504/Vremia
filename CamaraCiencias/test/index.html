@@ -3,44 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automated Weather Station View</title>
+    <title>⚡ Science Tower Weather Station</title>
     <style>
+        /* --- General Reset & Fonts --- */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f4f7f6; /* Light gray background */
+            color: #333;
         }
-        img {
-            max-width: 80%;
-            height: auto;
-            border: 2px solid #3498db;
+
+        /* --- Layout: Grid Container --- */
+        /* Use CSS Grid for the main layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 280px 1fr; /* Fixed sidebar width, flexible content */
+            min-height: 100vh;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- Sidebar Style --- */
+        .sidebar {
+            background: linear-gradient(180deg, #1c2b3d, #2c3e50); /* Dark, professional gradient */
+            color: white;
+            padding: 30px 20px;
+            box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+            position: sticky; /* Keep sidebar visible */
+            top: 0;
+            height: 100%;
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+            font-size: 1.8em;
+            color: #3498db; /* Accent color for the title */
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 1.1em;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sidebar a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(52, 152, 219, 0.1); /* Light blue overlay for hover */
+            transition: all 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: #fff;
+            background-color: #3498db; /* Solid color on hover */
+            transform: translateX(5px);
+        }
+        
+        .sidebar a:hover:before {
+            left: 0;
+        }
+
+
+        /* --- Main Content Style --- */
+        .content {
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .content h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            border-bottom: 4px solid #3498db;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .content h2 {
+            color: #3498db;
+            margin-top: 40px;
+            padding-left: 10px;
+            border-left: 5px solid #2c3e50;
+            text-transform: capitalize;
+        }
+
+        .intro-text {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 30px;
+            background-color: #ecf0f1;
+            padding: 15px;
             border-radius: 8px;
+        }
+
+        /* --- Image Gallery Styling (using Flexbox) --- */
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px; /* Spacing between images */
+            justify-content: center; /* Center images in the container */
             margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 23%; /* Allows four images per row with gap */
+            height: auto;
+            border: 3px solid #3498db;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: zoom-in;
+        }
+        
+        .image-container img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Special style for the main live view image */
+        .live-view-img {
+            max-width: 90%;
+            display: block;
+            margin: 20px auto 40px auto;
+            border: 5px solid #2ecc71; /* Green border for "Live" feeling */
+        }
+        
+        /* --- Footer --- */
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 0.85em;
+            color: #888;
+            border-top: 1px dashed #ccc;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    
-    <h1>Science Tower Weather Station</h1>
-    
-    <p>
-        Welcome! This is the current live view near the station.
-        The WRF model forecast will be added here soon, but for now,
-        we're starting simple with this static image hosted on Google Drive.
-    </p>
 
-    <img src="../2020-07-06.gif" alt="Live Camera View" width="480" height="360">
-    <p style="margin-top: 40px; font-size: 0.8em; color: #555;">
-    <img src="../39[R][0@0][0] (3).jpg" alt="Live Camera View" width="480" height="360">
-    <img src="../39[R][0@0][0] (2).jpg" alt="Live Camera View" width="480" height="360">
-    <img src="../39[R][0@0][0].jpg" alt="Live Camera View" width="480" height="360">
-    <img src="../39[R][0@0][0] (1).jpg" alt="Live Camera View" width="480" height="360">
-    
-    
- 
-    <p style="margin-top: 40px; font-size: 0.8em; color: #555;">
-        Last updated: [Time Stamp will be added with automation later]
-    </p>
+    <div class="grid-container">
+        <div class="sidebar">
+            <h2>Weather Station</h2>
+            <a href="#live-view">🎥 Live View</a>
+            <a href="#gallery">🖼️ Image Gallery</a>
+            <a href="#forecast">📈 WRF Forecast (Soon)</a>
+            <a href="#about">ℹ️ About</a>
+        </div>
+
+        <div class="content">
+            <h1 id="live-view">Science Tower Weather Station</h1>
+            <p class="intro-text">Welcome! This is the **current live view** near the station. We aim to provide real-time atmospheric data. The high-resolution **WRF model forecast** will be added here soon, giving you predictive insights into the local microclimate.</p>
+
+            <img src="2020-07-06.gif" alt="Live Camera View" class="live-view-img">
+
+            <h2 id="gallery">Recent Images: A Glimpse of the Tower</h2>
+            <div class="image-container">
+                <img src="39[R][0@0][0] (3).jpg" alt="Camera Image">
+                <img src="39[R][0@0][0] (2).jpg" alt="Camera Image">
+                <img src="39[R][0@0][0].jpg" alt="Camera Image">
+                <img src="39[R][0@0][0] (1).jpg" alt="Camera Image">
+            </div>
+
+            <h2 id="forecast">WRF Forecast Plot: Predicted Data</h2>
+            <p>Below is the latest WRF model forecast plot:</p>
+            <img src="window_T2RH2WS10SLP_violin.png" alt="WRF Forecast Plot" class="live-view-img">
+
+        </div>
+    </div>
+
+    <footer>
+        Last updated: [Time Stamp will be added with automation later] | Science Tower Initiative &copy; 2025
+    </footer>
 
 </body>
 </html>
