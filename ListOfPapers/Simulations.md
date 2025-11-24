@@ -65,7 +65,8 @@
 
 $$µ_{J,h} (x) \propto \exp\left(\frac{1}{2} \langle x, Jx\rangle + \langle h, x \rangle\right)$$ 
 
-with $||J|| < 1 − c$ (the regime where fast mixing is known), we show that we can implement each step of $\tilde{\Theta}(n/|J|_F)$-Glauber dynamics efficiently with a parallel algorithm, resulting in a parallel algorithm with running time $\tilde{O}(||J||_F) = \tilde{O}(\sqrt{n})$. 
+	with $||J|| < 1 − c$ (the regime where fast mixing is known), we show that we can implement each step of $\tilde{\Theta}(n/|J|_F)$-Glauber dynamics efficiently with a parallel algorithm, resulting in a parallel algorithm with running time $\tilde{O}(||J||_F) = \tilde{O}(\sqrt{n})$
+
 	- (2) For the mixed **p-spin model at high enough temperature**, we show that with high probability we can implement each step of $\tilde{\Theta}(\sqrt{n})$-Glauber dynamics efficiently and obtain running time $\tilde{O}(\sqrt{n})$
 
 ---
