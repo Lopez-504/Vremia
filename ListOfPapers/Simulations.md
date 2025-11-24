@@ -59,10 +59,14 @@
 
 - <mark>Lee 2024</mark>: Parallelising Glauber dynamics
 
-	- For distributions over discrete product spaces $\Pi_{i=1}^n\Omega_{i}'$, Glauber dynamics is a Markov chain that at each step, resamples a random coordinate conditioned on the other coordinates. 
-	- We show that k-Glauber dynamics, which resamples a random subset of k coordinates, mixes k times faster in $\chi^2$-divergence, and assuming approximate tensorization of entropy, mixes k times faster in KL-divergence. We apply this to obtain parallel algorithms in two settings
-	- For the **Ising model** $\mu_{J,h} (x) \propto \exp\left(\frac{1}{2} \langle x, J_x\rangle + \langle h, x \rangle\right)$ with $||J|| < 1 − c$ (the regime where fast mixing is known), we show that we can implement each step of $\tilde{\Theta}(n/|J|_F)$-Glauber dynamics efficiently with a parallel algorithm, resulting in a parallel algorithm with running time $\tilde{O}(||J||_F) = \tilde{O}(\sqrt{n})$.
-	- For the mixed **p-spin model at high enough temperature**, we show that with high probability we can implement each step of $\tilde{\Theta}(\sqrt{n})$-Glauber dynamics efficiently and obtain running time $\tilde{O}(\sqrt{n})$
+	- For distributions over discrete product spaces $\Pi_{i=1}^n\Omega_{i}'$, Glauber dynamics is a Markov chain that at each step, resamples a random coordinate conditioned on the other coordinates.
+	- We show that k-Glauber dynamics, which resamples a random subset of k coordinates, mixes k times faster in $\chi^2$-divergence, and assuming approximate tensorization of entropy, mixes k times faster in KL-divergence. We apply this to obtain parallel algorithms in two settings. For the **Ising model**
+
+$$\mu_{J,h} (x) \propto \exp\left(\frac{1}{2} \langle x, J_x\rangle + \langle h, x \rangle\right)$ 
+
+with $||J|| < 1 − c$$ (the regime where fast mixing is known), we show that we can implement each step of $\tilde{\Theta}(n/|J|_F)$-Glauber dynamics efficiently with a parallel algorithm, resulting in a parallel algorithm with running time $\tilde{O}(||J||_F) = \tilde{O}(\sqrt{n})$.
+
+For the mixed **p-spin model at high enough temperature**, we show that with high probability we can implement each step of $\tilde{\Theta}(\sqrt{n})$-Glauber dynamics efficiently and obtain running time $\tilde{O}(\sqrt{n})$
 
 ---
 
