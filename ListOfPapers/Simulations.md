@@ -11,6 +11,16 @@
 
 ---
 
+- <mark>Yang 2019</mark>: High Performance Monte Carlo Simulation of Ising Model on TPU Clusters
+
+	- Large-scale deep learning benefits from an emerging class of **AI accelerators**. Some of these accelerators’ designs are general enough for compute-intensive applications beyond AI and **Cloud TPU** is one such example. 
+	- In this paper, we demonstrate a novel approach using **TensorFlow** on Cloud TPU to simulate the 2D Ising Model. TensorFlow and Cloud TPU framework enable the simple and readable code to express the complicated distributed algorithm without compromising the performance. Our code implementation fits into a small Jupyter Notebook and fully utilizes **Cloud TPU’s efficient matrix operation** and dedicated high speed inter-chip connection. 
+	- The performance is highly competitive: it outperforms the best published benchmarks to our knowledge by $60\%$ in single-core and $250\%$ in multi-core with good linear scaling. When compared to Tesla V100 GPU, the single-core performance maintains a $\sim10\%$ gain. 
+	- We also demonstrate that using low precision arithmetic—bfloat16—does not compromise the correctness of the simulation results.
+	- Google's GitHub Repo: [link](https://github.com/google-research/google-research/tree/master/simulation_research/ising_model)
+
+---
+
 - <mark>Biciusca 2015</mark>: Simulation of liquid–vapour phase separation on GPUs using Lattice Boltzmann models with off-lattice velocity sets
 
 	- We use a 2D Lattice Boltzmann model to investigate the liquid–vapour phase separation in an isothermal van der Waals ﬂuid. 
@@ -51,8 +61,12 @@
 
 	- For distributions over discrete product spaces $\Pi_{i=1}^n\Omega_{i}'$, Glauber dynamics is a Markov chain that at each step, resamples a random coordinate conditioned on the other coordinates. 
 	- We show that k-Glauber dynamics, which resamples a random subset of k coordinates, mixes k times faster in $\chi^2$-divergence, and assuming approximate tensorization of entropy, mixes k times faster in KL-divergence. We apply this to obtain parallel algorithms in two settings: 
-		- (1) For the Ising model $µ_{J,h} (x) \propto exp(\frac{1}{2} \langle x, Jx\rangle + \langle h, x \rangle)$ with $||J|| < 1 − c$ (the regime where fast mixing is known), we show that we can implement each step of $\tilde{\Theta}(n/|J|_F)$-Glauber dynamics efficiently with a parallel algorithm, resulting in a parallel algorithm with running time $\tilde{O}(||J||_F) = \tilde{O}(\sqrt{n})$. 
-		- (2) For the mixed p-spin model at high enough temperature, we show that with high probability we can implement each step of $\tilde{\Theta}(\sqrt{n})$-Glauber dynamics efficiently and obtain running time $\tilde{O}(\sqrt{n})$
+	- (1) For the **Ising model**
+
+$$µ_{J,h} (x) \propto \exp\left(\frac{1}{2} \langle x, Jx\rangle + \langle h, x \rangle\right)$$ 
+
+with $||J|| < 1 − c$ (the regime where fast mixing is known), we show that we can implement each step of $\tilde{\Theta}(n/|J|_F)$-Glauber dynamics efficiently with a parallel algorithm, resulting in a parallel algorithm with running time $\tilde{O}(||J||_F) = \tilde{O}(\sqrt{n})$. 
+	- (2) For the mixed **p-spin model at high enough temperature**, we show that with high probability we can implement each step of $\tilde{\Theta}(\sqrt{n})$-Glauber dynamics efficiently and obtain running time $\tilde{O}(\sqrt{n})$
 
 ---
 
@@ -60,6 +74,7 @@
 
 	- The simulation of the 2D Ising model is used as a **benchmark to show the computational capabilities of GPUs**. The rich programming environment now available on GPUs and flexible hardware capabilities allowed us to quickly experiment with several implementation ideas: a simple stencil-based algorithm, recasting the stencil operations into matrix multiplies to take advantage of Tensor Cores available on NVIDIA GPUs, and a highly optimized multi-spin coding approach. Using the managed memory API available in CUDA allows for simple and efficient distribution of these implementations across a multi-GPU NVIDIA DGX-2 server. 
 	- We show that even a **basic GPU implementation can outperform current results published on TPUs** and that the optimized multi-GPU implementation can simulate very large lattices **faster than custom FPGA solutions**
+	- GitHub Repo: [Link](https://github.com/NVIDIA/ising-gpu)
 
 ---
 
@@ -83,8 +98,10 @@
 
 - <mark>Mathis 2017</mark>: A Thermodynamically consistent model of a liquid-vapor fluid with a gas
 
-	- This work is devoted to the consistent modeling of a three-phase mixture of a gas, a liquid and its vapor. Since the gas and the vapor are miscible, the mixture is subjected to a non-symmetric constraint on the volume. Adopting the **Gibbs formalism**, the study of the extensive equilibrium entropy of the system allows to recover the Dalton’s law between the two gaseous phases. In addition, we distinguish whether phase transition occurs or not between the liquid and its vapor. The thermodynamical equilibria are described both in extensive and intensive variables. In the latter case, we focus on the geometrical properties of equilibrium entropy. The consistent characterization of the thermodynamics of the three-phase mixture is used to introduce two Homogeneous Equilibrium Models (HEM) depending on mass transfer is taking into account or not. Hyperbolicity is investigated while analyzing the entropy structure of the systems. 
-	- Finally we propose two Homogeneous Relaxation Models (HRM) for the three-phase mixtures with and without phase transition. Supplementary equations on mass, volume and energy fractions are considered with appropriate source terms which model the relaxation towards the thermodynamical equilibrium, in agreement with entropy growth criterion.
+	- This work is devoted to the consistent modeling of a three-phase mixture of a gas, a liquid and its vapor. Since the gas and the vapor are miscible, the mixture is subjected to a non-symmetric constraint on the volume. 
+	- Adopting the **Gibbs formalism**, the study of the extensive equilibrium entropy of the system allows to **recover the Dalton’s law between the two gaseous phases**. In addition, we distinguish whether phase transition occurs or not between the liquid and its vapor. The thermodynamical equilibria are described both in extensive and intensive variables. In the latter case, we focus on the geometrical properties of equilibrium entropy. 
+	- The consistent characterization of the thermodynamics of the three-phase mixture is used to introduce two **Homogeneous Equilibrium Models** (HEM) depending on mass transfer is taking into account or not. Hyperbolicity is investigated while analyzing the entropy structure of the systems. 
+	- Finally we propose two **Homogeneous Relaxation Models** (HRM) for the three-phase mixtures with and without phase transition. Supplementary equations on mass, volume and energy fractions are considered with appropriate source terms which model the relaxation towards the thermodynamical equilibrium, in agreement with entropy growth criterion.
 
 ---
 
@@ -98,7 +115,8 @@
 
 - <mark>Jha 2023</mark>: GPU-acceleration of tensor renormalization with PyTorch using CUDA
 
-	- We show that numerical computations based on tensor renormalization group (TRG) methods can be signiﬁcantly accelerated with PyTorch on graphics processing units (GPUs) by leveraging NVIDIA’s Compute Uniﬁed Device Architecture (CUDA). We ﬁnd improvement in the runtime (for a given accuracy) and its scaling with bond dimension for two-dimensional systems. Our results establish that utilization of GPU resources is essential for future precision computations with TRG.
+	- We show that numerical computations based on tensor renormalization group (TRG) methods can be signiﬁcantly accelerated with PyTorch on graphics processing units (GPUs) by leveraging NVIDIA’s Compute Uniﬁed Device Architecture (CUDA). 
+	- We ﬁnd improvement in the runtime (for a given accuracy) and its scaling with bond dimension for two-dimensional systems. Our results establish that utilization of GPU resources is essential for future precision computations with TRG.
 
 ---
 
@@ -110,12 +128,29 @@
 
 ---
 
+- <mark>Zarei 2019</mark>: Ising order parameter and topological phase transitions: Toric code in a uniform magnetic field
+
+	- Quantum Ising model in a transverse field is of the simplest quantum many-body systems used for studying universal properties of quantum phase transitions. Interestingly, it is well-known that such phase transitions can be mapped to topological phase transitions in Toric code models. Therefore, one can expect that well-known properties of the transverse Ising model are used for characterizing topological phase transition in Toric code model. In this paper, we consider the magnetization of Ising model and show while it is a local order parameter, it is mapped to a non-local order parameter in the topological side. Consequently, we introduce a string order parameter for topological phase transitions in Toric code models defined on different lattices with different dimensions in presence of a uniform magnetic field. Since such string order parameter is dual of the Ising order parameter with well-known properties, it leads to a topological (non-local) characterization of phase transition in the Toric code model in uniform field. Our results show that although topological phase transitions do not follow a symmetry-breaking mechanism, it might be still possible to use concepts of symmetry- breaking phase transitions for topological ones by finding suitable mappings.
+
+---
+
+- <mark>Binder 2001</mark>: Monte Carlo tests of renormalization-group predictions for critical phenomena in Ising models
+
+	- A critical review is given of status and perspectives of Monte Carlo simulations that address **bulk and interfacial phase transitions of ferromagnetic Ising models**. 
+	- First, some basic methodological aspects of these simulations are briefly summarized (single-spin flip vs. cluster algorithms, finite-size scaling concepts), and then the application of these techniques to the nearest-neighbor Ising model in $d=3$ and $5$ dimensions is described, and a detailed comparison to theoretical predictions is made. 
+	- In addition, the case of Ising models with a large but finite range of interaction and the crossover scaling from mean-field behavior to the Ising universality class are treated. If one considers instead a **long-range interaction** described by a power-law decay, new classes of critical behavior depending on the exponent of this power law become accessible, and a stringent test of the $\epsilon$-expansion becomes possible. 
+	- As a final type of crossover from mean-field type behavior to 2D Ising behavior, the interface localization-delocalization transition of Ising films confined between "competing" walls is considered. This problem is still hampered by questions regarding the appropriate coarse-grained model for the fluctuating interface near a wall, which is the starting point for both this problem and the theory of critical wetting
+
+---
+
 - <mark>CHERRINGTON 2008</mark>: A DUAL ALGORITHM FOR NON-ABELIAN YANG-MILLS COUPLED TO DYNAMICAL FERMIONS
 
 	- We extend the dual algorithm recently described for pure, non-abelian Yang-Mills on the lattice to the case of lattice fermions coupled to Yang-Mills, by constructing an ergodic Metropolis algorithm for dynamic fermions that is local, exact, and built from gauge-invariant boson-fermion coupled configurations. Fon concreteness, we present in detail the case of 3D, for the group SU(2) and staggered fermions, however the algorithm readily generalizes with regard to group and dimension. 
 	- The treatment of the fermion determinant makes use of a polymer expansion; as with previous proposals making use of the polymer expansion in higher than 2D, the critical question for practical applications is whether the presence of negative amplitudes can be managed in the continuum limit.
 
 ---
+
+
 
 
 
