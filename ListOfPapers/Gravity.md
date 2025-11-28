@@ -1,5 +1,7 @@
 # Gravity
 
+![Be creative](../556.jpg)
+
 - <mark>Castillo-Felisola 2024</mark>: A polynomial affine model of gravity: after ten years
 
 	- The polynomial aﬃne model of gravity was proposed as an alternative to metric and metric-aﬃne gravitational models. What at the beginning was thought as a source of unpredictability, the presence of many terms in the action, turned out to be a milestone, since it contains all possible combinations of the ﬁelds compatible with the **covariance under diﬀeomorphisms**. 
