@@ -1,5 +1,8 @@
 
 # Some good papers
+
+![Be creative](../556.jpg)
+
 # Thesis: Structure formation and such
 
 - <mark>Suto-2015</mark>: CONFRONTATION OF TOP-HAT SPHERICAL COLLAPSE AGAINST DARK HALOS FROM COSMOLOGICAL N-BODY SIMULATIONS
