@@ -1,5 +1,7 @@
 # Cosmology
 
+![Be creative](../556.jpg)
+
 - <mark>Silveravalle 2025</mark> (NaP^[1]): Cosmology with a Non-minimally Coupled Dark Matter Fluid I. Background Evolution
 
 	- We explore a cosmological model in which dark matter is non-minimally coupled to gravity at the fluid level. 
